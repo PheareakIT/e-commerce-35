@@ -39,6 +39,7 @@ function Home() {
 
       </main>
 
+      {/* show product */}
       <div className="">
         <h2 className="text-center text-3xl font-bold mt-24">Best Sellers</h2>
         <p className="text-center m-4 text-xl text-gray-500">Explore our best seller products</p>

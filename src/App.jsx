@@ -5,6 +5,7 @@ import Product from './pages/Product'
 import Contact from './pages/Contact'
 import About from './pages/About'
 import RootLayout from './layouts/RootLayout'
+import ProductDetail from './pages/ProductDetail'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/contact" element={<Contact/>}></Route>
             <Route path="/about" element={<About/>}></Route>
             
+            <Route path="/product/:id" element={<ProductDetail/>}></Route>
           </Route>
         </Routes>
       </BrowserRouter>
