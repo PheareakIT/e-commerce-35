@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router';
 
 function Product() {
 
@@ -36,16 +37,19 @@ function Product() {
 
             {products.map( pro => (
 
-              <div className=" w-62 border border-gray-400 p-2 rounded-xl mb-6" key={pro.id}>
-                <div className="h-76 p-6 ">
-                  <img className="w-full h-full hover:scale-110 hover:cursor-pointer transition-all duration-400 " src={pro.image} alt="" />
-                </div>
-                <div className="">
-                  <p className="line-clamp-1">{pro.title}</p>
-                  <p>$ {pro.price}</p>
-                </div>
-              </div>
-              
+                <Link to={`/products/${pro.id}`} key={pro.id} >
+                  <div className=" w-62 border border-gray-400 p-2 rounded-xl mb-6" >
+                    
+                    <div className="h-76 p-6 ">
+                      <img className="w-full h-full hover:scale-110 hover:cursor-pointer transition-all duration-400 " src={pro.image} alt="" />
+                    </div>
+                    <div className="">
+                      <p className="line-clamp-1">{pro.title}</p>
+                      <p>$ {pro.price}</p>
+                    </div>
+                  </div>
+                </Link>
+
             ))}
 
 
